@@ -1,6 +1,12 @@
 //for loop and basic examples
 
+import java.util.Scanner;
+
+
 public class Assignment_4{
+
+
+
 	//print 1 to 10
 	static void ex1() {
 		System.out.println("Print 1 to 10 ");
@@ -30,7 +36,7 @@ public class Assignment_4{
 	}
 	
 	//odd in 66 to 44
-		static void ex4() {
+	static void ex4() {
             System.out.println("Odd numbers 66 to 44 ");
 			for(int i=66;i>=44;--i) {
 				if(i%2!=0)
@@ -69,7 +75,7 @@ public class Assignment_4{
 		for(int i=15;i<=35;++i) {
 			if(i%2!=0)
 				System.out.println(i);
-				sum=sum+i;
+	            sum=sum+i;
 		}
 		System.out.println("Sum of numbers is : "+sum+"\n\n");
 	}
@@ -86,7 +92,7 @@ public class Assignment_4{
 	
 	
 	//sum of even numbers divisible by 3 and 5 in 1 to 100
-		static void ex9() {
+	static void ex9() {
             System.out.println("Sum of even numbers divisible by 3 and 5 in 1 to 100 ");
 			int sum=0;
 			for(int i=15;i<=35;++i) {
@@ -95,6 +101,33 @@ public class Assignment_4{
 					sum=sum+i;
 			}
 			System.out.println("Sum of numbers is : "+sum+"\n\n");
+		}
+
+		//Prime number
+	static void ex10() {
+	Scanner scanner = new Scanner(System.in);
+	            System.out.println("Check for Prime number");
+				      System.out.print("Enter a number: ");
+	                    int number = scanner.nextInt();
+	                    scanner.close();
+	                    boolean isPrime = true;
+
+	                    if (number <= 1) {
+	                        isPrime = false;
+	                    } else {
+	                        for (int i = 2; i <= Math.sqrt(number); i++) {
+	                            if (number % i == 0) {
+	                                isPrime = false;
+	                                break;
+	                            }
+	                        }
+	                    }
+
+	                    if (isPrime) {
+	                        System.out.println(number + " is a prime number.");
+	                    } else {
+	                        System.out.println(number + " is not a prime number.");
+	                    }
 		}
 
 	public static void main(String[] args) {
@@ -108,6 +141,8 @@ public class Assignment_4{
 		ex7();
 		ex8();
 		ex9();
+		ex10();
+        
 
 	}
 }
