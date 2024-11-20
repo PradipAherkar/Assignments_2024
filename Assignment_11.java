@@ -1,5 +1,5 @@
 
-// 
+// Convert a float value to an integer
 
 import java.util.Scanner;
 
