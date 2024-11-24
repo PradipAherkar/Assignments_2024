@@ -8,7 +8,7 @@ public class Assignment_17 {
 
         Scanner s=new Scanner(System.in);
 
-        System.out.println("Enter The String : ");
+        System.out.println("\nEnter The String : ");
         String original =s.next();
                 char[] charArray = original.toCharArray();
                 String reversed = "";
@@ -25,7 +25,8 @@ public class Assignment_17 {
               // Count the number of vowels, consonants, digits, and spaces in a string
               String str = "Java Programming 101!";
               int vowels = 0, consonants = 0, digits = 0, spaces = 0;
-      
+            
+              System.out.println("\nJava Programming 101!");
               for (char ch : str.toCharArray()) {
                   if (Character.isDigit(ch)) {
                       digits++;
@@ -44,12 +45,16 @@ public class Assignment_17 {
               System.out.println("Consonants: " + consonants);
               System.out.println("Digits: " + digits);
               System.out.println("Spaces: " + spaces);
-    }
-
+            }
+            
     static void task3(){
         // Compare two strings for equality (case-sensitive and case-insensitive)
-                String str1 = "Hello";
-                String str2 = "hello";
+        String str1 = "Hello";
+        String str2 = "hello";
+        
+        System.out.println("\nString First : " + str1);
+        System.out.println("String Second : " + str2);
+
                 System.out.println("Case-Sensitive Comparison: " + str1.equals(str2));
                 System.out.println("Case-Insensitive Comparison: " + str1.equalsIgnoreCase(str2));   
     }
@@ -57,6 +62,7 @@ public class Assignment_17 {
         // Extract the domain name from an email address
 
                 String email = "user@example.com";
+                System.out.println("\nEmail address : "+email);
                 int atIndex = email.indexOf('@');
         
                 if (atIndex != -1) {
@@ -66,11 +72,26 @@ public class Assignment_17 {
                     System.out.println("Invalid email address");
                 }
         }
+        
+        static void task5(){
+            // Parse a string of space-separated integers and calculate their sum
+                    String numbers = "10 20 30 40 50";
+                    System.out.println("\nIntegers are: " + numbers);
+                    String[] parts = numbers.split(" ");
+                    int sum = 0;
+            
+                    for (String part : parts) {
+                        sum += Integer.parseInt(part);
+                    }
+            
+                    System.out.println("Sum of Integers: " + sum);
+                        }
 
     public static void main(String[] args) {
         task1();
         task2();
         task3();
         task4();
+        task5();
     }
 }
