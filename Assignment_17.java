@@ -53,9 +53,24 @@ public class Assignment_17 {
                 System.out.println("Case-Sensitive Comparison: " + str1.equals(str2));
                 System.out.println("Case-Insensitive Comparison: " + str1.equalsIgnoreCase(str2));   
     }
+    static void task4(){
+        // Extract the domain name from an email address
+
+                String email = "user@example.com";
+                int atIndex = email.indexOf('@');
+        
+                if (atIndex != -1) {
+                    String domain = email.substring(atIndex + 1);
+                    System.out.println("Domain: " + domain);
+                } else {
+                    System.out.println("Invalid email address");
+                }
+        }
 
     public static void main(String[] args) {
         task1();
         task2();
+        task3();
+        task4();
     }
 }
