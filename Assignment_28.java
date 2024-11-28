@@ -65,7 +65,7 @@ public class Assignment_28 {
         }
     
     public static void main(String[] args) {
-        // task1();
+        task1();
         task2();
     }
 }
