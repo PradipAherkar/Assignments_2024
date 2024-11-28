@@ -39,19 +39,37 @@ public class Assignment_27{
             System.out.println("Enter any number to check it is power of 2 or not.");
             Scanner s=new Scanner(System.in);
             int num = s.nextInt();
-
+            
             // Check if the number is a power of 2 using bitwise AND
-
+            
             if (num > 0 && (num & (num - 1)) == 0) {
                 System.out.println(num + " is a power of 2.");
             } else {
                 System.out.println(num + " is not a power of 2.");
             }
         }
+        
+        
+        static void task4(){
+            // Program to multiply and divide by 2 using left and right shift operators
+            
+            System.out.println("Enter any number : ");
+            Scanner s=new Scanner(System.in);
+            int num = s.nextInt();
+        
+            // Multiply by 2 (left shift by 1)
+            int multiplied = num << 1;
+            System.out.println(num + " multiplied by 2: " + multiplied);
+
+            // Divide by 2 (right shift by 1)
+            int divided = num >> 1;
+            System.out.println(num + " divided by 2: " + divided);
+        }
             
         public static void main(String[] args) {
             task1();
             task2();
             task3();
+            task4();
     }
 }
